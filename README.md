@@ -10,8 +10,6 @@ Please check the [official documentation of Moralis](https://docs.moralis.io/#us
 
 ![Demo](gifs/moralis-unity-boilerplate_2.gif)
 
-https://github.com/ethereum-boilerplate/web3-unity-boilerplate/blob/main/gifs/migrate_to_v1_2_0.mp4
-
 # ⭐️ `Star us`
 If this boilerplate helps you build Ethereum dapps faster - please star this project, every star makes us very happy!
 
