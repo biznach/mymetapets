@@ -1,0 +1,4 @@
+repository "unity-web3-game-kit@MyMetaverse@cloud"
+  path "/"
+    br "/main"
+    co "/main"

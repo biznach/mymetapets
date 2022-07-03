@@ -88,4 +88,4 @@ Blog
 About
 
 # Plastic source control files
-.plastic/
+#.plastic/
