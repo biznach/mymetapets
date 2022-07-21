@@ -890,6 +890,50 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &512717851
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 512717852}
+  - component: {fileID: 512717853}
+  m_Layer: 0
+  m_Name: Importer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &512717852
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 512717851}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: -98.4, z: -0.64}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1232319730}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!114 &512717853
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 512717851}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22871ca00e186d54a83bb593b9c1f40e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &551993848
 GameObject:
   m_ObjectHideFlags: 0
@@ -15763,8 +15807,9 @@ Transform:
   m_Children:
   - {fileID: 5685949}
   - {fileID: 1068583105}
-  - {fileID: 1464030280}
+  - {fileID: 2031078800}
   - {fileID: 155697641}
+  - {fileID: 512717852}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -15997,100 +16042,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1432025177}
   m_CullTransparentMesh: 1
---- !u!1001 &1464030279
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1232319730}
-    m_Modifications:
-    - target: {fileID: 100000, guid: b3cd7919ec0ceda4fb03d1eacaa034d6, type: 3}
-      propertyPath: m_Name
-      value: Fish School Goldfish Swimmers Avoidance
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: b3cd7919ec0ceda4fb03d1eacaa034d6, type: 3}
-      propertyPath: m_RootOrder
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: b3cd7919ec0ceda4fb03d1eacaa034d6, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: b3cd7919ec0ceda4fb03d1eacaa034d6, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -98.36
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: b3cd7919ec0ceda4fb03d1eacaa034d6, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: b3cd7919ec0ceda4fb03d1eacaa034d6, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: b3cd7919ec0ceda4fb03d1eacaa034d6, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: b3cd7919ec0ceda4fb03d1eacaa034d6, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: b3cd7919ec0ceda4fb03d1eacaa034d6, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: b3cd7919ec0ceda4fb03d1eacaa034d6, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: b3cd7919ec0ceda4fb03d1eacaa034d6, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: b3cd7919ec0ceda4fb03d1eacaa034d6, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 11400000, guid: b3cd7919ec0ceda4fb03d1eacaa034d6, type: 3}
-      propertyPath: _maxScale
-      value: 1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 11400000, guid: b3cd7919ec0ceda4fb03d1eacaa034d6, type: 3}
-      propertyPath: _minScale
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 11400000, guid: b3cd7919ec0ceda4fb03d1eacaa034d6, type: 3}
-      propertyPath: _childAmount
-      value: 13
-      objectReference: {fileID: 0}
-    - target: {fileID: 11400000, guid: b3cd7919ec0ceda4fb03d1eacaa034d6, type: 3}
-      propertyPath: _posBuffer.y
-      value: 1.6399994
-      objectReference: {fileID: 0}
-    - target: {fileID: 11400000, guid: b3cd7919ec0ceda4fb03d1eacaa034d6, type: 3}
-      propertyPath: _groupChildToSchool
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 11400002, guid: b3cd7919ec0ceda4fb03d1eacaa034d6, type: 3}
-      propertyPath: _maxBubbles
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 19800000, guid: b3cd7919ec0ceda4fb03d1eacaa034d6, type: 3}
-      propertyPath: InitialModule.startSizeY.minMaxState
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 19800000, guid: b3cd7919ec0ceda4fb03d1eacaa034d6, type: 3}
-      propertyPath: InitialModule.startSizeZ.minMaxState
-      value: 3
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: b3cd7919ec0ceda4fb03d1eacaa034d6, type: 3}
---- !u!4 &1464030280 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 400000, guid: b3cd7919ec0ceda4fb03d1eacaa034d6, type: 3}
-  m_PrefabInstance: {fileID: 1464030279}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1522930624
 GameObject:
   m_ObjectHideFlags: 0
@@ -35823,6 +35774,112 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
+--- !u!1001 &2031078799
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1232319730}
+    m_Modifications:
+    - target: {fileID: 100000, guid: 6fab12f1ccc6085469d4d335e6a93986, type: 3}
+      propertyPath: m_Name
+      value: Fish School Clownfish Swimmers Avoidance
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 6fab12f1ccc6085469d4d335e6a93986, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 6fab12f1ccc6085469d4d335e6a93986, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 6fab12f1ccc6085469d4d335e6a93986, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 6fab12f1ccc6085469d4d335e6a93986, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -98.36
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 6fab12f1ccc6085469d4d335e6a93986, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 6fab12f1ccc6085469d4d335e6a93986, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 6fab12f1ccc6085469d4d335e6a93986, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 6fab12f1ccc6085469d4d335e6a93986, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 6fab12f1ccc6085469d4d335e6a93986, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 6fab12f1ccc6085469d4d335e6a93986, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 6fab12f1ccc6085469d4d335e6a93986, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 6fab12f1ccc6085469d4d335e6a93986, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 6fab12f1ccc6085469d4d335e6a93986, type: 3}
+      propertyPath: _maxScale
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 6fab12f1ccc6085469d4d335e6a93986, type: 3}
+      propertyPath: _minScale
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 6fab12f1ccc6085469d4d335e6a93986, type: 3}
+      propertyPath: _childAmount
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 6fab12f1ccc6085469d4d335e6a93986, type: 3}
+      propertyPath: _posBuffer.y
+      value: 1.6399994
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 6fab12f1ccc6085469d4d335e6a93986, type: 3}
+      propertyPath: _maxAnimationSpeed
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 6fab12f1ccc6085469d4d335e6a93986, type: 3}
+      propertyPath: _minAnimationSpeed
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: 6fab12f1ccc6085469d4d335e6a93986, type: 3}
+      propertyPath: _maxBubbles
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: 6fab12f1ccc6085469d4d335e6a93986, type: 3}
+      propertyPath: _emitEverySecond
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 19800000, guid: 6fab12f1ccc6085469d4d335e6a93986, type: 3}
+      propertyPath: InitialModule.startSizeY.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 19800000, guid: 6fab12f1ccc6085469d4d335e6a93986, type: 3}
+      propertyPath: InitialModule.startSizeZ.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6fab12f1ccc6085469d4d335e6a93986, type: 3}
+--- !u!4 &2031078800 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400000, guid: 6fab12f1ccc6085469d4d335e6a93986, type: 3}
+  m_PrefabInstance: {fileID: 2031078799}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2054601015
 GameObject:
   m_ObjectHideFlags: 0
