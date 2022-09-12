@@ -9,7 +9,7 @@ using UnityEngine;
 
 public class BizSchoolChild:MonoBehaviour{
 	[HideInInspector]
-	public SchoolController _spawner;
+	public BizSchoolController _spawner;
 	Vector3 _wayPoint;
 	[HideInInspector]
 	public float _speed= 10.0f;				//Fish Speed
@@ -28,6 +28,8 @@ public class BizSchoolChild:MonoBehaviour{
 	int _updateSeed = -1;
 	[HideInInspector]
 	public Transform _cacheTransform;
+	// Biz
+	Vector3 _scaleVector;
 	
 	#if UNITY_EDITOR
 	public static bool _sWarning;
@@ -125,10 +127,16 @@ public class BizSchoolChild:MonoBehaviour{
 	}
 	
 	public void SetRandomScale(){
-		float sc = Random.Range(_spawner._minScale, _spawner._maxScale);
-		_cacheTransform.localScale=Vector3.one*sc;
+		float scx = Random.Range(_spawner._minScale, _spawner._maxScale);
+		float scy = Random.Range(_spawner._minScale, _spawner._maxScale);
+		float scz = Random.Range(_spawner._minScale, _spawner._maxScale);
+		_scaleVector.x = _cacheTransform.localScale.x*scx;
+		_scaleVector.y = _cacheTransform.localScale.y*scy;
+		_scaleVector.z = _cacheTransform.localScale.z*scz*0.85F;
+		_cacheTransform.localScale=_scaleVector;
+		//_cacheTransform.localScale=Vector3.one*sc;
 	}
-	
+
 	public void RandomizeStartAnimationFrame(){
         foreach(AnimationState state in _model.GetComponent<Animation>()) {
 		 	state.time = Random.value * state.length;

@@ -28,7 +28,7 @@ namespace MoralisUnity.Demos.Introduction
         {
             authenticationKitObject.SetActive(false);
             congratulationUiObject.SetActive(true);
-            fireworksObject.SetActive(true);
+            //fireworksObject.SetActive(true);
         }
 
         public void LogoutButton_OnClicked()

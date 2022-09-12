@@ -19,7 +19,7 @@ using System.Collections.Generic;
 
 public class SchoolController:MonoBehaviour{
 	
-	public BizSchoolChild[] _childPrefab;			// Assign prefab with SchoolChild script attached
+	public SchoolChild[] _childPrefab;			// Assign prefab with SchoolChild script attached
 	public bool _groupChildToNewTransform;	// Parents fish transform to school transform
 	public Transform _groupTransform;			// New game object created for group
 	public string _groupName = "";				// Name of group (if no name, the school name will be used)
@@ -51,7 +51,7 @@ public class SchoolController:MonoBehaviour{
 	public bool _autoRandomPosition;			// Automaticly positions waypoint based on random values (_randomPositionTimerMin, _randomPositionTimerMax)
 	public float _forcedRandomDelay = 1.5f;		// Random delay added before forcing new waypoint
 	public float _schoolSpeed;					// Value multiplied to child speed
-	public List<BizSchoolChild> _roamers;
+	public List<SchoolChild> _roamers;
 	public Vector3 _posBuffer;
 	public Vector3 _posOffset;
 	
@@ -114,7 +114,7 @@ public class SchoolController:MonoBehaviour{
 		if(_groupChildToNewTransform)InstantiateGroup();	
 		for(int i=0;i<amount;i++){
 			int child = Random.Range(0,_childPrefab.Length);
-			BizSchoolChild obj = (BizSchoolChild)Instantiate(_childPrefab[child]);		
+			SchoolChild obj = (SchoolChild)Instantiate(_childPrefab[child]);		
 		    obj._spawner = this;
 		    _roamers.Add(obj);
 			AddChildToParent(obj.transform);
@@ -133,7 +133,7 @@ public class SchoolController:MonoBehaviour{
 	}
 	
 	public void RemoveFish(int amount){
-		BizSchoolChild dObj = _roamers[_roamers.Count-1];
+		SchoolChild dObj = _roamers[_roamers.Count-1];
 		_roamers.RemoveAt(_roamers.Count-1);
 		Destroy(dObj.gameObject);
 	}
