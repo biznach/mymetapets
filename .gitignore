@@ -12,7 +12,7 @@
 
 # MemoryCaptures can get excessive in size.
 # They also could contain extremely sensitive data
-/[Mm]emoryCaptures/
+/[Mm]emory[Cc]aptures/
 
 # Recordings can get excessive in size
 /[Rr]ecordings/
@@ -88,4 +88,9 @@ Blog
 About
 
 # Plastic source control files
-#.plastic/
+/.plastic/
+/.plastic/*.*
+/.plastic/plastic.wktree
+.plastic/
+.plastic/*.*
+.plastic/plastic.wktree
