@@ -70,7 +70,7 @@ The following sections highlight some of the code snippets related to `Key Techn
 
 - The "Genesis" ERC1155 NFT's have been minted on the Mumbai testnet of the Polygon blockchain with the intent of minting on mainnet when ready for public participation. 
 - The smart contract can be verified at https://mumbai.polygonscan.com/address/0x89bb19b45c8481d9d0a48be4b1287fbc54ee7506
-- The NFT collection can be viewd at https://testnets.opensea.io/collection/mymetapets
+- The NFT collection can be viewed at https://testnets.opensea.io/collection/mymetapets
 
 ### Valist
 
