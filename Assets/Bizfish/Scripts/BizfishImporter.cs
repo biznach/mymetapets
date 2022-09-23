@@ -31,8 +31,7 @@ public class BizfishImporter : MonoBehaviour
         // (e.g. "C:/Users/Joe/Desktop/piggleston.glb"), or a byte[]
         // array containing the raw byte content of the file.
         _task = RuntimeGltfImporter.GetImportTask(
-            "https://gateway.pinata.cloud/ipfs/QmcoHNnvEwbnVX3XsaTyqUGsRoEK7U8gw8nkF7QxQ4e2po",
-            //"C:/Users/bizfu/Documents/Blender/Clownfish/clownfish.glb",
+            "https://bafybeiektpbyn5g4f2ep3zwfhp27cokwioqc5jgof2uz7jbs2bq6jjpg4q.ipfs.nftstorage.link/clownfish.glb",
             importOptions);
 
         _task.OnCompleted = OnComplete;
