@@ -74,7 +74,8 @@ The following sections highlight some of the code snippets related to `Key Techn
 
 ### Valist
 
-- Although the storefront presence is light, the game is proudly hosted on Valis.io at https://app.valist.io/mymetapets/mymetapets
+- Although the storefront presence is light, the game will be proudly hosted on Valis.io at https://app.valist.io/mymetapets/mymetapets
+- The direct link is currently https://bafybeigyl4hsll3vpomzay2zpq2ntpzvl3unqqcn6cv4mmxyjrsbassdna.ipfs.gateway.valist.io/
 - You can look forward to robust metadata and compelling premium offerings
 
 ### Unity
