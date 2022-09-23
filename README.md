@@ -45,7 +45,7 @@ Fish are the first `Pets` that we intend to bring to the Metaverse. Our approach
 | Filecoin | [Filecoin.io](https://filecoin.io) | Decentralized interplanetary storage network |
 | NFT.Storage | [NFT.Storage](https://nft.storage) | Perpetual Filecoin storage for public goods |
 | Polygon | [Polygon.Technology](https://polygon.technology) | High-speed low-fee "Layer 2" blockchain |
-| Chainlink | [Chain.Linkk](https://chain.link) | Secure offchain oracles and services |
+| Chainlink | [Chain.Link](https://chain.link) | Secure offchain oracles and services |
 | Valist | [Valist.io](https://valist.io) | Decentralized hosting and discovery platform |
 | Unity | [Unity3D.com](https://unity3d.com) | 3D Game engine with rich community extensions |
 
