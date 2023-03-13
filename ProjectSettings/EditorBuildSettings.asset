@@ -5,7 +5,10 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
+  - enabled: 0
+    path: Assets/Thirdweb/Examples/Scenes/Scene_Prefabs.unity
+    guid: bd374468f6e2ace4c81d8f34ac8672ca
   - enabled: 1
-    path: Assets/Moralis Web3 Unity SDK/Demos/Introduction/Introduction.unity
-    guid: bcac914c797f36648be1d71cd24dea34
+    path: Assets/bizfish/scenes/Fishtank.unity
+    guid: fc5172aebb00e79409328c6e4a0ea24e
   m_configObjects: {}

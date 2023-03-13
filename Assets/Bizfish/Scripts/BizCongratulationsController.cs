@@ -1,6 +1,6 @@
-using MoralisUnity;
-using MoralisUnity.Platform.Objects;
-using MoralisUnity.Web3Api.Models;
+//using MoralisUnity;
+//using MoralisUnity.Platform.Objects;
+//using MoralisUnity.Web3Api.Models;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -57,36 +57,36 @@ namespace MoralisUnity.Demos.Introduction
             schoolController.SetFishAmount(0);
         }
 
-        async void OnEnable()
-        {
-            Debug.Log("PrintOnDisable: script was enabled");
+        //async void OnEnable()
+        //{
+            //Debug.Log("PrintOnDisable: script was enabled");
             //schoolController.SetFishAmount(fishCount);
-            if (MoralisState.Initialized.Equals(Moralis.State))
-            {
-                MoralisUser user = await Moralis.GetUserAsync();
+            //if (MoralisState.Initialized.Equals(Moralis.State))
+            //{
+            //    MoralisUser user = await Moralis.GetUserAsync();
 
-                if (user == null)
-                {
+            //    if (user == null)
+            //    {
                     // User is null so go back to the authentication scene.
-                    SceneManager.LoadScene(0);
-                }
+            //        SceneManager.LoadScene(0);
+            //    }
 
                 // Display User's wallet address.
-                addressText.text = FormatUserAddressForDisplay(user.ethAddress);
+            //    addressText.text = FormatUserAddressForDisplay(user.ethAddress);
 
                 // Retrienve the user's native balance;
-                NativeBalance balanceResponse = await Moralis.Web3Api.Account.GetNativeBalance(user.ethAddress, Moralis.CurrentChain.EnumValue);
+            //    NativeBalance balanceResponse = await Moralis.Web3Api.Account.GetNativeBalance(user.ethAddress, Moralis.CurrentChain.EnumValue);
 
-                double balance = 0.0;
-                float decimals = Moralis.CurrentChain.Decimals * 1.0f;
-                string sym = Moralis.CurrentChain.Symbol;
+            //    double balance = 0.0;
+            //    float decimals = Moralis.CurrentChain.Decimals * 1.0f;
+            //    string sym = Moralis.CurrentChain.Symbol;
 
                 // Make sure a response to the balanace request weas received. The 
                 // IsNullOrWhitespace check may not be necessary ...
-                if (balanceResponse != null && !string.IsNullOrWhiteSpace(balanceResponse.Balance))
-                {
-                    double.TryParse(balanceResponse.Balance, out balance);
-                }
+            //    if (balanceResponse != null && !string.IsNullOrWhiteSpace(balanceResponse.Balance))
+            //    {
+            //       double.TryParse(balanceResponse.Balance, out balance);
+            //    }
 
                 // Display native token amount token in fractions of token.
                 // NOTE: May be better to link this to chain since some tokens may have
@@ -94,36 +94,36 @@ namespace MoralisUnity.Demos.Introduction
                 //balanceText.text = string.Format("{0:0.####} {1}", (balance / (double)Mathf.Pow(10.0f, decimals)), sym);
 
                 //BIZ BALANCE
-                NftOwnerCollection nftCollection = await Moralis.Web3Api.Account.GetNFTsForContract(user.ethAddress, contractAddress, ChainList.mumbai);
-                List<NftOwner> nftOwners = nftCollection.Result;
-                string fishCountString = "0";
-                if (nftCollection.Total < 1)
-                {
-                    Debug.Log($"User {user.ethAddress} does not have any NFTs");
-                    schoolController.SetFishAmount(0);
-                }
-                else
-                {
-                    fishCountString = nftOwners[0].Amount;
-                    fishCount = System.Convert.ToInt32(fishCountString);
-                    schoolController.SetFishAmount(fishCount);
+            //    NftOwnerCollection nftCollection = await Moralis.Web3Api.Account.GetNFTsForContract(user.ethAddress, contractAddress, ChainList.mumbai);
+            //    List<NftOwner> nftOwners = nftCollection.Result;
+            //    string fishCountString = "0";
+            //    if (nftCollection.Total < 1)
+            //    {
+            //        Debug.Log($"User {user.ethAddress} does not have any NFTs");
+            //        schoolController.SetFishAmount(0);
+            //    }
+            //    else
+            //    {
+            //        fishCountString = nftOwners[0].Amount;
+            //        fishCount = System.Convert.ToInt32(fishCountString);
+            //        schoolController.SetFishAmount(fishCount);
                     //schoolController.SetFishAmount(5);
 
-                }
-                balanceText.text = $"Clownfish: {fishCountString}";
-            }
-        }
+            //    }
+            //    balanceText.text = $"Clownfish: {fishCountString}";
+            //}
+        //}
 
-        private string FormatUserAddressForDisplay(string addr)
-        {
-            string resp = addr;
+        //private string FormatUserAddressForDisplay(string addr)
+        //{
+        //    string resp = addr;
 
-            if (resp.Length > 13)
-            {
-                resp = string.Format("{0}...{1}", resp.Substring(0, 6), resp.Substring(resp.Length - 4, 4));
-            }
+        //    if (resp.Length > 13)
+        //    {
+        //        resp = string.Format("{0}...{1}", resp.Substring(0, 6), resp.Substring(resp.Length - 4, 4));
+        //    }
 
-            return resp;
-        }
+        //    return resp;
+        //}
     }
 }
