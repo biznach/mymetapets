@@ -45,7 +45,7 @@ Fish are the first `Pets` that we intend to bring to the Metaverse. Our approach
 | Filecoin | [Filecoin.io](https://filecoin.io) | Decentralized interplanetary storage network |
 | NFT.Storage | [NFT.Storage](https://nft.storage) | Perpetual Filecoin storage for public goods |
 | Polygon | [Polygon.Technology](https://polygon.technology) | High-speed low-fee "Layer 2" blockchain |
-| Chainlink | [Chain.Linkk](https://chain.link) | Secure offchain oracles and services |
+| Chainlink | [Chain.Link](https://chain.link) | Secure offchain oracles and services |
 | Valist | [Valist.io](https://valist.io) | Decentralized hosting and discovery platform |
 | Unity | [Unity3D.com](https://unity3d.com) | 3D Game engine with rich community extensions |
 
@@ -55,32 +55,33 @@ The following sections highlight some of the code snippets related to `Key Techn
 
 ### Moralis
 
-The user is authenticated through the Moralis SDK in th UI COntroller https://github.com/biznach/mymetapets/blob/main/Assets/Bizfish/Scripts/BizUIController.cs
+- The user is authenticated through the Moralis SDK in th UI COntroller https://github.com/biznach/mymetapets/blob/main/Assets/Bizfish/Scripts/BizUIController.cs
 
-Relevant information based on the connected wallet are then displayed and system variables like number of fish owned is captured in the Congratulations Controller https://github.com/biznach/mymetapets/blob/main/Assets/Bizfish/Scripts/BizCongratulationsController.cs
+- Relevant information based on the connected wallet are then displayed and system variables like number of fish owned is captured in the Congratulations Controller https://github.com/biznach/mymetapets/blob/main/Assets/Bizfish/Scripts/BizCongratulationsController.cs
 
 ### Filecoin and NFT.Storage
 
-The NFT metadata is stored at ipfs://bafybeieks3k2ql4ehkn3dzoa3q23xe6yi64yo3zpdix3oayifzyjr3d2fe
-The NFT image is stored at ipfs://bafybeicezpjgptfzc54enl44vk532uuajtyn5nm6ipaumprexxytn2255y
-The NFT model and animation data is stored at ipfs://bafybeiektpbyn5g4f2ep3zwfhp27cokwioqc5jgof2uz7jbs2bq6jjpg4q
-There is currently a POC of loading a fish directly from the IPFS NFT metadata in https://github.com/biznach/mymetapets/blob/main/Assets/Bizfish/Scripts/BizSchoolController.cs (Temporarily struggled to get loaded assets to align with AI objects) 
+- The NFT metadata is stored at ipfs://bafybeieks3k2ql4ehkn3dzoa3q23xe6yi64yo3zpdix3oayifzyjr3d2fe
+- The NFT image is stored at ipfs://bafybeicezpjgptfzc54enl44vk532uuajtyn5nm6ipaumprexxytn2255y
+- The NFT model and animation data is stored at ipfs://bafybeiektpbyn5g4f2ep3zwfhp27cokwioqc5jgof2uz7jbs2bq6jjpg4q
+- There is currently a POC of loading a fish directly from the IPFS NFT metadata in https://github.com/biznach/mymetapets/blob/main/Assets/Bizfish/Scripts/BizSchoolController.cs (Temporarily struggled to get loaded assets to align with AI objects) 
 
 ### Polygon
 
-The "Genesis" ERC1155 NFT's have been minted on the Mumbai testnet of the Polygon blockchain with the intent of minting on mainnet when ready for public participation. 
-The smart contract can be verified at https://mumbai.polygonscan.com/address/0x89bb19b45c8481d9d0a48be4b1287fbc54ee7506
-The NFT collection can be viewd at https://testnets.opensea.io/collection/mymetapets
+- The "Genesis" ERC1155 NFT's have been minted on the Mumbai testnet of the Polygon blockchain with the intent of minting on mainnet when ready for public participation. 
+- The smart contract can be verified at https://mumbai.polygonscan.com/address/0x89bb19b45c8481d9d0a48be4b1287fbc54ee7506
+- The NFT collection can be viewed at https://testnets.opensea.io/collection/mymetapets
 
 ### Valist
 
-Although the storefront presence is light, the game is proudly hosted on Valis.io at https://app.valist.io/mymetapets/mymetapets
-You can look forward to robust metadata and compelling premium offerings
+- Although the storefront presence is light, the game will be proudly hosted on Valis.io at https://app.valist.io/mymetapets/mymetapets
+- The direct link is currently https://bafybeigyl4hsll3vpomzay2zpq2ntpzvl3unqqcn6cv4mmxyjrsbassdna.ipfs.gateway.valist.io/
+- You can look forward to robust metadata and compelling premium offerings
 
 ### Unity
 
-Unity engine (and extensions) are used to build a WEBGL executable
+- Unity engine (and extensions) are used to build a WEBGL executable
 
 ### Chainlink
 
-This feature has not yet been implemented, but it will ensure that all random functions have on-chain verification
+- This feature has not yet been implemented, but it will ensure that all random functions have on-chain verification
