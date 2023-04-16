@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddc9f54270664c1489c2e88423a73c43, type: 3}
   m_Name: PigletOptions
   m_EditorClassIdentifier: 
-  EnableEditorGltfImports: 1
+  EnableEditorGltfImports: 0
   LogProgress: 0
   ImportOptions:
     ShowModelAfterImport: 1
@@ -22,6 +22,7 @@ MonoBehaviour:
     AnimationClipType: 1
     EnsureQuaternionContinuity: 1
     CreateMipmaps: 0
+    ZipPassword: 
   DragAndDropOptions:
     PromptBeforeOverwritingFiles: 1
     CopyGltfFilesIntoProject: 0

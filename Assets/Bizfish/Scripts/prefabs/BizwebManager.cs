@@ -49,7 +49,7 @@ public class BizwebManager : MonoBehaviour
 
     public static BizwebManager Instance;
 
-    public static string MainContractAddress = "0x9ec4bA8A3A7b4De67f44Ac97c8b35aF3BeDea450";
+    public static string mainContractAddress = "0x9ec4bA8A3A7b4De67f44Ac97c8b35aF3BeDea450";
     
     private void Awake()
     {
