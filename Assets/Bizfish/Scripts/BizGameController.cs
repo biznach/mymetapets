@@ -1,64 +1,109 @@
 //using MoralisUnity;
-//using MoralisUnity.Platform.Objects;
-//using MoralisUnity.Web3Api.Models;
-using Thirdweb;
+//using MoralisUnity.Kits.AuthenticationKit;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
-using UnityEngine.UI;
+using Thirdweb;
 
-public class BizHUDController : MonoBehaviour
+
+public class BizGameController : MonoBehaviour
 {
-    [Header("Texts")]
-    [SerializeField]
-    private Text addressText;
+
+    [Header("FishSchoolController")]
 
     [SerializeField]
-    private Text balanceText;
+    private BizSchoolController schoolController = null;
 
     [SerializeField]
-    private Text contextText;
+    public int fishCount = 0;
 
-    [Header("Buttons")]
+    [Header("ObjectReferences")]
+
     [SerializeField]
-    private Button backButton = null;
+    private GameObject managerObject = null;
 
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField]
+    private GameObject controllerObject = null;
+
+    [SerializeField]
+    private GameObject uiCanvas = null;
+    
+    [Header("Contracts")]
+
+    [SerializeField]
+    const string TOKEN_ERC1155_CONTRACT = "0x89bB19B45C8481D9d0A48bE4B1287fBc54Ee7506";
+    
+    private ThirdwebManager managerScript = null;
+
+    private BizHUDController controllerScript = null;
+
+    private bool isShowing = true;
+
+    private string fishCountString = "0";
+
+    private void Start()
     {
-        if (addressText == null)
+        managerScript = managerObject.GetComponent<ThirdwebManager>();
+        controllerScript = controllerObject.GetComponent<BizHUDController>();
+    }
+    private void Update()
+    {
+        if (Input.GetKeyDown("tab"))
         {
-            Debug.LogError("Address Text not set.");
-            return;
+            if (controllerObject.activeInHierarchy == true)
+            {
+                isShowing = !isShowing;
+                uiCanvas.SetActive(isShowing);
+            }
         }
+    }
 
-        if (balanceText == null)
+    void OnEnable()
+    {
+        Debug.Log("PrintOnDisable: script was enabled");
+        //schoolController.SetFishAmount(0);
+    }
+
+    void OnDisable()
+    {
+        Debug.Log("PrintOnDisable: script was disabled");
+        //schoolController.SetFishAmount(0);
+    }
+
+    public void Authentication_OnConnect()
+    {
+        GetNFTCount();
+    }
+
+    public void Authentication_OnDisconnect()
+    {
+        //controllerObject.SetActive(false);
+    }
+
+    public async void GetNFTCount()
+    {
+        try
         {
-            Debug.LogError("Balance Text not set.");
-            return;
-        }
+            Contract contract = ThirdwebManager.Instance.SDK.GetContract(TOKEN_ERC1155_CONTRACT);
 
-        if (contextText == null)
+            fishCountString = await contract.ERC1155.Balance("1");
+            fishCount = System.Convert.ToInt32(fishCountString);
+
+            //Debugger.Instance.Log("[GetNFTCount] Count", fishCountString);
+            Debug.Log("[GetNFTCount] Count " + fishCountString);
+            controllerScript.UpdateBalance("Fish: " + fishCountString);
+
+            schoolController.SetFishAmount(fishCount);
+        }
+        catch (System.Exception e)
         {
-            Debug.LogError("Context Text not set.");
-            return;
+            Debugger.Instance.Log("[GetNFTCount] Error", e.Message);
         }
     }
-
-    public void UpdateAddress(string address)
-    {
-        addressText.text = address;
-    }
-
-     public void UpdateBalance(string balance)
-    {
-        balanceText.text = balance;
-    }
-
-     public void UpdateContext(string context)
-    {
-        contextText.text = context;
-    }
+    //public async void UpdateHud()
+    //{
+            //TBD
+    //}
 
     //public async void UpdateHud()
     //{
@@ -116,16 +161,4 @@ public class BizHUDController : MonoBehaviour
         //    balanceText.text = $"Clownfish: {fishCountString}";
         //}
     //}
-
-    private string FormatUserAddressForDisplay(string addr)
-    {
-        string resp = addr;
-
-        if (resp.Length > 13)
-        {
-            resp = string.Format("{0}...{1}", resp.Substring(0, 6), resp.Substring(resp.Length - 4, 4));
-        }
-
-        return resp;
-    }
 }
